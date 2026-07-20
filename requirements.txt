@@ -1,0 +1,15 @@
+accelerate
+torchvision==0.14.1
+scipy
+torch==1.13.1
+tqdm
+numpy
+torch_pruning
+huggingface_hub==0.25.2
+lmdb
+wandb
+tensorboard
+gdown
+gspread
+oauth2client
+easydict
