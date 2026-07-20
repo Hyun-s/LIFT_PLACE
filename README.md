@@ -8,6 +8,15 @@ Authors: Hyunsoo Han, Sangyeop Yeo, [Jaejun Yoo](https://scholar.google.co.kr/ci
 ![imgs](assets/teaser.SVG)
 
 ---
+## Overview
+A larger teacher is not always a better teacher for lightweight diffusion models. As the capacity gap between the teacher and student increases, conventional knowledge distillation becomes harder to optimize, less stable, and less effective.
+
+We propose LIFT and PLACE, a simple coarse-to-fine knowledge distillation framework for lightweight diffusion models.
+
+- LIFT (LInear FiTting-based Distillation) decomposes the distillation error into Coarse-Easy and Fine-Hard components. It first aligns low-order statistical differences and then gradually shifts toward fine-grained refinement.
+- PLACE (Piecewise Local Adaptive Coefficient Estimation) addresses spatially non-uniform distillation errors by grouping output elements according to their difficulty and providing locally adaptive guidance.
+
+Our framework introduces no additional parameters or inference overhead and can be applied to a wide range of diffusion models.
 
 ## Codes for Diff-Pruning, BK-SDM and TinyFusion
 Please refer following codes for each model.
