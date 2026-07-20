@@ -16,7 +16,6 @@ pip install -r requirements.txt
 gdown https://drive.google.com/drive/folders/1MeWya1fe2BziF96-9azk75OQ96ho-dI9?usp=sharing --folder
 gdown https://drive.google.com/drive/folders/1_R0OcvwvrVwoAjUjgFjRbBeLPNU49amy?usp=drive_link --folder
 
-cd ddpm_exp
 mkdir -p run && cd run
 gdown https://drive.google.com/drive/folders/1X9fOxTAoWgV4JTR-D-pDaVO3sxfszHdY?usp=sharing --folder
 ```
