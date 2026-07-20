@@ -1,7 +1,7 @@
 
 
 <h1> [CVPR 2026] LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models </h1>
-This repository is based on TinyFusion: Diffusion Transformers Learned Shallow.
+This repository is based on [TinyFusion: Diffusion Transformers Learned Shallow](https://github.com/VainF/TinyFusion).
 
 ## 1. Prepare
 
@@ -12,14 +12,14 @@ pip install -r requirements.txt
 ```
 
 ### Prepare Experiment Settings.
-The experimental setup follows the BK-SDM baseline.
-TinyFusion [https://github.com/VainF/TinyFusion] 의 preparation을 참조해서 준비할 수 있음.
+The experimental setup follows the BK-SDM baseline. 
+You can prepare the environment and data by referring to the preparation guide in the [TinyFusion repository](https://github.com/VainF/TinyFusion).
 
 
 ## 2. Train with slurm
 
 ### Usage
-Run the training script using sbatch with your desired UNet architecture, loss type, and group size.
+Run the training script using sbatch with your desired KD lambda, loss type, and group size.
 ```bash
 sbatch scripts/train_d14.sh <KD-LAMBDA> <LOSS_TYPE> <GROUP_SIZE>
 ```
@@ -32,7 +32,7 @@ sbatch scripts/train_d14.sh 1 LIFT_PLACE 16
 
 ## 3. Evaluation
 ### Usage
-Models are saved with an ID formatted as ${UNET_NAME}_${LOSS_TYPE}_${GROUP_SIZE} (or PATCH). Use this MODEL_ID and the target iteration step to run the evaluation.
+Models are saved with an ID formatted as ${DiT_NAME}-${MODEL-DEPTH}_${DiT-PATCH}/${MODEL-DEPTH}-Learned/${LOSS_TYPE}_${GROUP_SIZE}_${KD_LAMBDA}.
 ```bash
 sbatch scripts/sample.sbatch <KD-LAMBDA> <LOSS_TYPE> <GROUP_SIZE> <ITER> <DEPTH>
 sbatch scripts/eval.sbatch <KD-LAMBDA> <LOSS_TYPE> <GROUP_SIZE> <ITER> <DEPTH>
