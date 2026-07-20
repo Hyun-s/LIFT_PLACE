@@ -3,5 +3,6 @@ __pycache__
 *.log
 run
 data
-*.png
-BK_SDM_EXP/
+*.pt
+*.pyc
+*.npz

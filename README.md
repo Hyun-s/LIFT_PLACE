@@ -1,65 +1,60 @@
+# [CVPR 2026] Singular Value Scaling: Efficient Generative Model Compression via Pruned Weights Refinement
+
+### [Arxiv](https://arxiv.org/pdf/2605.19729) / [Project Page](https://hyun-s.github.io/LIFT_PLACE_site/)
+
+Authors: Hyunsoo Han, Sangyeop Yeo, [Jaejun Yoo](https://scholar.google.co.kr/citations?hl=en&user=7NBlQw4AAAAJ)
+
+---
+![imgs](assets/teaser.SVG)
+
+---
+
+## Codes for Diff-Pruning, BK-SDM and TinyFusion
+Please refer following codes for each model.
+- DDPM: [Diff-Pruning](Diff_Pruning_EXP/)
+- Stable Diffusion: [BK-SDM](BK_SDM_EXP/)
+- DiT: [TinyFusion](TinyFusion_EXP/)
 
 
-<h1> [CVPR 2026] LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models </h1>
-This repo based on [Diff-Pruning: Structural Pruning for Diffusion Models](https://github.com/VainF/Diff-Pruning).
-For the kd loss function, refer to the functions/losses.py.
+## Acknowledgements
+We sincerely thank the authors of Diff-Pruning, BK-SDM, and TinyFusion for open-sourcing their excellent codebases and providing strong baselines for generative model compression.
 
-## 1. Prepare
+Their contributions provided a solid foundation for developing and evaluating this work across DDPM, Stable Diffusion, and Diffusion Transformer architectures.
 
-### Requirements
+**Diff-Pruning**
 ```bash
-pip install -r requirements.txt
-```
-
-### Download Pre-trained/Pruned celeba diffusion models for pruned initial weight.
-```bash
-gdown https://drive.google.com/drive/folders/1MeWya1fe2BziF96-9azk75OQ96ho-dI9?usp=sharing --folder
-gdown https://drive.google.com/drive/folders/1_R0OcvwvrVwoAjUjgFjRbBeLPNU49amy?usp=drive_link --folder
-
-mkdir -p run && cd run
-gdown https://drive.google.com/drive/folders/1X9fOxTAoWgV4JTR-D-pDaVO3sxfszHdY?usp=sharing --folder
-```
-### prepare dataset
-```bash
-└── data
-    └── celeba
-        ├── Anno
-        ├── CelebA
-        ├── Eval
-        └── Img
-``` 
-
-## 2. Train
-### Usage
-```bash
-CUDA_VISIBLE_DEVICES=0 bash scripts/celeba.sh {sparsity} {lambda_kd} {method} {patch_size}
-```
-### Example
-LIFT and PLACE sparsity 0.9 with lambda_kd 1 and group_size 16
-```bash
-CUDA_VISIBLE_DEVICES=0 bash scripts/celeba.sh 0.9 1 LIFT_PLACE_fitnet 16
-```
-
-## 3. Evaluation
-### Requirements
-```bash
-cd evals
-gdown https://drive.google.com/drive/folders/1_JLw8ihGhQMFEI-NMVb1M0y8TpvEeJBn?usp=sharing --folder
+@inproceedings{fang2023structural,
+  title={Structural pruning for diffusion models},
+  author={Gongfan Fang and Xinyin Ma and Xinchao Wang},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2023},
+}
 ```
 
 
-### Usage
+
+
+**BK-SDM**
 ```bash
-CUDA_VISIBLE_DEVICES=0 bash scripts/celeba.sh {sparsity} {lambda_kd} {method} {ITER}
+@inproceedings{kim2024bk,
+  title={Bk-sdm: A lightweight, fast, and cheap version of stable diffusion},
+  author={Kim, Bo-Kyeong and Song, Hyoung-Kyu and Castells, Thibault and Choi, Shinkook},
+  booktitle={European Conference on Computer Vision},
+  pages={381--399},
+  year={2024},
+  organization={Springer}}
 ```
 
 
-### Examples
-Evaluate sparsity 0.3 finetuned models (100k)
+**TinyFusion**
 ```bash
-CUDA_VISIBLE_DEVICES=0 bash scripts/sample_eval.sh 0.3 1 finetune 100000
+@inproceedings{fang2025tinyfusion,
+  title={Tinyfusion: Diffusion transformers learned shallow},
+  author={Fang, Gongfan and Li, Kunjun and Ma, Xinyin and Wang, Xinchao},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={18144--18154},
+  year={2025}}
 ```
-
 
 ## Cite this work
 If you found this repository useful, please consider giving a star and citation:
