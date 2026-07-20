@@ -15,10 +15,7 @@ ENV="comp"
 TOKEN="${ENV:-}"   # ENV 변수가 없으면 빈 문자열
 
 # Not KD
-if [[ "$METHOD" == "finetune" \
-      || "$METHOD" == "reg_patch" \
-      || "$METHOD" == "only_reg_patch" \
-      || "$METHOD" == "multi_scale" ]]; then
+if [[ "$METHOD" == "finetune" ]]; then
     accelerate launch \
         --main_process_port ${ACCEL_PORT} finetune.py \
         --config celeba.yml \

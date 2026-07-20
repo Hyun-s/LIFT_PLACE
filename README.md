@@ -2,7 +2,7 @@
 
 <h1> [CVPR 2026] LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models </h1>
 This repo based on [Diff-Pruning: Structural Pruning for Diffusion Models](https://github.com/VainF/Diff-Pruning).
-For the kd loss function, refer to the kdlosses.py and ddpm_exp/functions/losses.py.
+For the kd loss function, refer to the functions/losses.py.
 
 ## 1. Prepare
 
@@ -21,13 +21,12 @@ gdown https://drive.google.com/drive/folders/1X9fOxTAoWgV4JTR-D-pDaVO3sxfszHdY?u
 ```
 ### prepare dataset
 ```bash
-└── ddpm_exp
-    └── data
-        └── celeba
-            ├── Anno
-            ├── CelebA
-            ├── Eval
-            └── Img
+└── data
+    └── celeba
+        ├── Anno
+        ├── CelebA
+        ├── Eval
+        └── Img
 ``` 
 
 ## 2. Train
