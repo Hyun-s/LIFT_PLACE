@@ -48,7 +48,7 @@ sbatch scripts/eval.sbatch 1 LIFT_PLACE 16 500000 D14
 
 ## Cite this work
 If you found this repository useful, please consider giving a star and citation:
-```bash
+```bibtex
 @inproceedings{han2026lift,
   title={LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models},
   author={Han, Hyunsoo and Yeo, Sangyeop and Yoo, Jaejun},

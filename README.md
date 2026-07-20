@@ -1,4 +1,4 @@
-# [CVPR 2026] Singular Value Scaling: Efficient Generative Model Compression via Pruned Weights Refinement
+# [CVPR 2026] LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models
 
 ### [Arxiv](https://arxiv.org/pdf/2605.19729) / [Project Page](https://hyun-s.github.io/LIFT_PLACE_site/)
 
@@ -22,7 +22,7 @@ We sincerely thank the authors of Diff-Pruning, BK-SDM, and TinyFusion for open-
 Their contributions provided a solid foundation for developing and evaluating this work across DDPM, Stable Diffusion, and Diffusion Transformer architectures.
 
 **Diff-Pruning**
-```bash
+```bibtex
 @inproceedings{fang2023structural,
   title={Structural pruning for diffusion models},
   author={Gongfan Fang and Xinyin Ma and Xinchao Wang},
@@ -35,7 +35,7 @@ Their contributions provided a solid foundation for developing and evaluating th
 
 
 **BK-SDM**
-```bash
+```bibtex
 @inproceedings{kim2024bk,
   title={Bk-sdm: A lightweight, fast, and cheap version of stable diffusion},
   author={Kim, Bo-Kyeong and Song, Hyoung-Kyu and Castells, Thibault and Choi, Shinkook},
@@ -47,7 +47,7 @@ Their contributions provided a solid foundation for developing and evaluating th
 
 
 **TinyFusion**
-```bash
+```bibtex
 @inproceedings{fang2025tinyfusion,
   title={Tinyfusion: Diffusion transformers learned shallow},
   author={Fang, Gongfan and Li, Kunjun and Ma, Xinyin and Wang, Xinchao},
@@ -58,7 +58,7 @@ Their contributions provided a solid foundation for developing and evaluating th
 
 ## Cite this work
 If you found this repository useful, please consider giving a star and citation:
-```bash
+```bibtex
 @inproceedings{han2026lift,
   title={LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models},
   author={Han, Hyunsoo and Yeo, Sangyeop and Yoo, Jaejun},

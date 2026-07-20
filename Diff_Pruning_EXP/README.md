@@ -63,7 +63,7 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/sample_eval.sh 0.3 1 finetune 100000
 
 ## Cite this work
 If you found this repository useful, please consider giving a star and citation:
-```bash
+```bibtex
 @inproceedings{han2026lift,
   title={LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models},
   author={Han, Hyunsoo and Yeo, Sangyeop and Yoo, Jaejun},
