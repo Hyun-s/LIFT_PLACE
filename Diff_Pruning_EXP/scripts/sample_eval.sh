@@ -26,9 +26,7 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICE python "$BASEDIR/finetune.py" \
   --fid \
   --use_ema \
   --restore_from "$BASEDIR/run/finetune_final/"$exp_name"/celeba_"${PRUNING_RATIO}"_"${LAMBDA}"/logs/post_training/ckpt_"${ITER}".pth" \
-
-cd ..
-cd evals
+cd "$BASEDIR/evals"
 CUDA_VISIBLE_DEVICES=$CUDA_DEVICE python prdc_score.py \
   --save-stats \
   "$BASEDIR/run/finetune_final/$exp_name/celeba_${PRUNING_RATIO}_${LAMBDA}/image_samples/images/0" \

@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=32G
-#SBATCH -o /workspace/hyuns/src/BK-SDM/slurm/o/%x_%j.out
-#SBATCH -e /workspace/hyuns/src/BK-SDM/slurm/e/%x_%j.err
+#SBATCH -o ./slurm/o/%x_%j.out
+#SBATCH -e ./slurm/e/%x_%j.err
 
 # ------------------------------------------------------------------------------------
 # Copyright 2023. Nota Inc. All Rights Reserved.
@@ -122,12 +122,12 @@ fi
 # =========================== Environment ============================
 
 export WANDB_MODE=offline
-export HF_HOME=/workspace/hyuns/huggingface_cache
+# export HF_HOME=/workspace/hyuns/huggingface_cache
 # MODEL_NAME="CompVis/stable-diffusion-v1-4"
 
 MODEL_NAME="stabilityai/stable-diffusion-2-1-base"
-# TRAIN_DATA_DIR="./data/laion_aes/preprocessed_212k"   # adjust if needed
-TRAIN_DATA_DIR="/data/hyuns/preprocessed_212k"
+TRAIN_DATA_DIR="./data/laion_aes/preprocessed_212k"
+# TRAIN_DATA_DIR="/data/hyuns/preprocessed_212k"   # adjust if needed
 UNET_CONFIG_PATH="./src/unet_config_v2-base"
 OUTPUT_DIR="./results_v2/${UNET_NAME}_${LOSS_TYPE}_${PATCH}"
 

@@ -43,8 +43,8 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/celeba.sh 0.9 1 LIFT_PLACE_fitnet 16
 ## 3. Evaluation
 ### Requirements
 ```bash
-cd evals
 gdown https://drive.google.com/drive/folders/1_JLw8ihGhQMFEI-NMVb1M0y8TpvEeJBn?usp=sharing --folder
+cd evals
 ```
 
 
