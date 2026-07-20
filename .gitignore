@@ -1,0 +1,7 @@
+.vscode
+__pycache__
+*.log
+run
+data
+*.png
+BK_SDM_EXP/
